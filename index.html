@@ -75,6 +75,54 @@ button:disabled{opacity:.45;cursor:not-allowed}
 .flash{animation:flash .35s ease}@keyframes flash{50%{background:#152739}}
 @media(max-width:1120px){.main{grid-template-columns:220px minmax(470px,1fr) 305px}.topStats{display:none}}
 @media(max-width:820px){body{overflow:auto}.app{height:auto;min-height:100vh;min-width:760px}}
+
+/* PaperDesk Ultra UI */
+:root{--glow:rgba(47,229,255,.18);--glass:rgba(10,17,27,.72)}
+body{background:
+ radial-gradient(900px 520px at 15% -10%,rgba(47,229,255,.10),transparent 60%),
+ radial-gradient(760px 500px at 100% 0%,rgba(177,140,255,.09),transparent 58%),
+ #05070c}
+.app{background:linear-gradient(180deg,rgba(255,255,255,.015),transparent 22%)}
+.top{background:linear-gradient(180deg,rgba(10,16,25,.96),rgba(5,9,15,.94));box-shadow:0 1px 0 rgba(255,255,255,.03),0 12px 40px rgba(0,0,0,.22)}
+.brand{font-size:17px;letter-spacing:2px;text-shadow:0 0 22px var(--glow)}
+.brand i{color:var(--cyan);text-shadow:0 0 16px rgba(47,229,255,.55)}
+.badge{box-shadow:0 0 18px rgba(47,229,255,.06)}
+.search{background:rgba(8,15,24,.82);border-color:#223447;box-shadow:inset 0 1px 0 rgba(255,255,255,.025)}
+.toolbar{background:rgba(7,12,19,.92);backdrop-filter:blur(12px)}
+.main{background:rgba(3,7,12,.45)}
+.left,.right{background:rgba(8,13,20,.78);backdrop-filter:blur(12px)}
+.center{background:rgba(5,9,15,.72)}
+.section,.box{border-color:rgba(75,105,132,.28)}
+.section{background:linear-gradient(180deg,rgba(255,255,255,.012),transparent)}
+.section h3{color:#c1d0df;letter-spacing:1.3px}
+.wrow{border:1px solid transparent;transition:.16s ease;position:relative;overflow:hidden}
+.wrow:hover{transform:translateX(2px);border-color:#244158;background:linear-gradient(90deg,rgba(47,229,255,.07),transparent)}
+.wrow.sel{border-color:#2b536b;background:linear-gradient(90deg,rgba(47,229,255,.11),rgba(91,169,255,.035))}
+.wrow.sel:before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:2px;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}
+.addrow input,.field input,.field select,.field textarea,#tokenPicker{box-shadow:inset 0 1px 0 rgba(255,255,255,.025),0 0 0 0 transparent;transition:border-color .15s,box-shadow .15s}
+.addrow input:focus,.field input:focus,.field select:focus,.field textarea:focus,#tokenPicker:focus{border-color:#3a6b87;box-shadow:0 0 0 3px rgba(47,229,255,.07)}
+.primary{background:linear-gradient(135deg,#2fe5ff,#5ba9ff);box-shadow:0 8px 28px rgba(47,229,255,.14);transition:.16s transform,.16s box-shadow}
+.primary:hover{transform:translateY(-1px);box-shadow:0 12px 34px rgba(47,229,255,.22)}
+.execute.buy{box-shadow:0 8px 22px rgba(39,223,148,.10)}
+.execute.sell{box-shadow:0 8px 22px rgba(255,85,119,.10)}
+.panel,.estimate{background:linear-gradient(180deg,rgba(12,23,34,.9),rgba(6,12,19,.9));border-color:#203345}
+.chartArea{background:radial-gradient(600px 300px at 50% 35%,rgba(47,229,255,.025),transparent 70%)}
+.quote{background:linear-gradient(180deg,rgba(11,18,28,.8),rgba(6,10,16,.65))}
+.title h1{font-size:19px;letter-spacing:-.25px}
+.metric b{font-variant-numeric:tabular-nums}
+.footer{background:rgba(5,9,14,.92);backdrop-filter:blur(10px)}
+.miniBtn{border:1px solid #22374a;background:#0a131d;color:#91a6ba;border-radius:999px;padding:4px 7px;font-size:9px;font-weight:900;cursor:pointer}
+.miniBtn:hover,.miniBtn.on{color:#eaf7ff;border-color:#2e667f;background:#102330;box-shadow:0 0 14px rgba(47,229,255,.08)}
+.creatorHero{position:relative;padding:12px;border:1px solid #224055;border-radius:10px;background:radial-gradient(250px 130px at 100% 0%,rgba(47,229,255,.11),transparent 70%),linear-gradient(145deg,rgba(18,32,45,.88),rgba(7,12,19,.92));margin-bottom:9px;overflow:hidden}
+.creatorHero:after{content:"";position:absolute;right:-35px;bottom:-55px;width:130px;height:130px;border-radius:50%;border:1px solid rgba(47,229,255,.12);box-shadow:0 0 0 20px rgba(47,229,255,.018),0 0 0 40px rgba(47,229,255,.012)}
+.creatorKicker{font-size:8px;letter-spacing:1.6px;color:var(--cyan);font-weight:1000;margin-bottom:5px}
+.creatorHero h2{margin:0;font-size:16px;letter-spacing:-.3px}.creatorHero p{margin:5px 0 0;color:#8ea1b3;font-size:9px;line-height:1.45;max-width:260px}
+.globalShare{display:grid;grid-template-columns:1fr auto;gap:5px;margin-top:8px}.globalShare input{width:100%;padding:7px 8px;border:1px solid #203345;border-radius:5px;background:#050b11;color:#91a6ba;font-size:9px;outline:0}.globalShare button{border:1px solid #2a5269;background:#0d202b;color:#c9eff8;border-radius:5px;padding:0 9px;font-weight:900}
+.globalBadge{display:inline-flex;align-items:center;gap:5px;font-size:8px;font-weight:950;letter-spacing:.7px;color:#8feeff;border:1px solid #28566b;background:#0a1c26;border-radius:999px;padding:4px 7px}
+.globalBadge:before{content:"";width:5px;height:5px;border-radius:50%;background:var(--green);box-shadow:0 0 9px var(--green)}
+.emptyState{display:grid;place-items:center;text-align:center;min-height:220px;color:#7c8fa1;padding:25px}.emptyState .orb{width:66px;height:66px;border-radius:50%;border:1px solid #295268;background:radial-gradient(circle at 35% 30%,#3ce8ff22,#101c28 65%);box-shadow:0 0 45px rgba(47,229,255,.09);display:grid;place-items:center;font-size:26px;margin-bottom:12px}.emptyState strong{display:block;color:#dbe9f5;font-size:14px;margin-bottom:5px}.emptyState span{font-size:10px;max-width:300px;line-height:1.5}
+@media(max-width:900px){.topStats{display:none}.main{grid-template-columns:220px minmax(440px,1fr) 300px}}
+
 </style>
 </head>
 <body>
@@ -117,6 +165,12 @@ button:disabled{opacity:.45;cursor:not-allowed}
   </section>
   <section class="section"><h3 id="watchTitle">Your memecoins</h3><select id="tokenPicker" aria-label="Select your memecoin" style="width:100%;margin-bottom:7px;padding:8px;background:#060c13;border:1px solid var(--line);border-radius:5px;outline:0"></select><div id="quickTokens" style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:7px"></div><div id="watch" class="watch"></div></section>
   <section class="section">
+    <div class="creatorHero">
+      <div class="creatorKicker">MEMECOIN STUDIO · GLOBAL HTML</div>
+      <h2>Build a coin. Share a link. Trade it.</h2>
+      <p>Create a self-contained fictional token. Its definition is embedded into a share URL, so anyone who opens the link in this HTML gets the same coin without a database.</p>
+      <div style="margin-top:8px"><span class="globalBadge">SHAREABLE WORLDWIDE</span></div>
+    </div>
     <h3>Create memecoin</h3>
     <div class="field"><label>Name</label><input id="coinName" placeholder="My Awesome Coin" maxlength="32"></div>
     <div class="grid2">
@@ -124,11 +178,12 @@ button:disabled{opacity:.45;cursor:not-allowed}
       <div class="field"><label>Chain / theme</label><input id="coinChain" placeholder="MyChain" maxlength="20"></div>
     </div>
     <div class="grid2">
-      <div class="field"><label>Starting price</label><input id="coinPrice" type="number" min="0.00000001" step="any" placeholder="0.0001"></div>
+      <div class="field"><label>Starting price</label><input id="coinPrice" type="number" min="0.000000000001" step="any" placeholder="0.0001"></div>
       <div class="field"><label>Total supply</label><input id="coinSupply" type="number" min="1" step="1" placeholder="1000000000"></div>
     </div>
-    <button id="createCoinBtn" class="primary" style="width:100%;margin-top:4px">＋ Create My Memecoin</button>
-    <div class="tiny" style="margin-top:6px">These are fictional paper-market assets. Nothing is deployed on a blockchain and no real money is involved.</div>
+    <button id="createCoinBtn" class="primary" style="width:100%;margin-top:4px">＋ Create & Publish Memecoin</button>
+    <div id="globalShareBox" class="globalShare" style="display:none"><input id="globalShareLink" readonly aria-label="Global memecoin share link"><button id="copyGlobalBtn" type="button">Copy link</button></div><button id="publishMarketBtn" class="ghost" type="button" style="width:100%;margin-top:5px">🌐 Copy Global Market Link</button>
+    <div class="tiny" style="margin-top:6px">Global here means <b>portable in the HTML</b>: the coin is encoded in its share URL. This is not a blockchain deployment and no real money is involved.</div>
   </section>
   <section class="section">
     <h3>Market pulse</h3>
@@ -197,7 +252,7 @@ button:disabled{opacity:.45;cursor:not-allowed}
       <div class="stat"><span>Buying power</span><b id="buyingPower">$100,000</b></div>
     </div>
     <button id="executeBtn" class="execute buy">Place paper buy</button>
-    <div class="tiny" style="margin-top:7px">Orders never route to a broker. Live mode only reads public crypto market data when available.</div>
+    <div class="tiny" style="margin-top:7px">Orders never route to a broker. This build uses fictional, user-created memecoins only.</div>
 
     <div class="panel">
       <div class="panelTitle"><span>Pending orders</span><span id="pendingCount">0</span></div>
@@ -228,7 +283,7 @@ button:disabled{opacity:.45;cursor:not-allowed}
 </aside>
 </main>
 <footer class="footer">
-  <span>PAPERDESK CREATOR PAPER MODE · No real orders</span><span>Keys: / search · B buy · S sell · Esc close</span><span class="rightF" id="clock">—</span>
+  <span>PAPERDESK MEMECOIN STUDIO · GLOBAL SHARE LINKS · No real orders</span><span>Keys: / search · B buy · S sell · Esc close</span><span class="rightF" id="clock">—</span>
 </footer>
 </div>
 
@@ -236,7 +291,7 @@ button:disabled{opacity:.45;cursor:not-allowed}
 
 <div id="settingsModal" class="modal"><div class="modalCard">
   <h2>PAPERDESK settings</h2>
-  <p>Everything here stays in your browser. Your memecoins are fictional paper-market assets created by you and stored locally in this browser.</p>
+  <p>Your coins persist locally, and each coin can also be shared globally through a self-contained HTML URL. Opening that URL imports the coin definition into another copy of PaperDesk. No blockchain deployment or real-money trading occurs.</p>
   <div class="grid2">
     <div class="field"><label>Theme</label><select id="theme"><option value="paperdesk">PaperDesk Dark</option><option value="violet">Violet Night</option><option value="ice">Ice Terminal</option></select></div>
     <div class="field"><label>Refresh interval</label><select id="refreshRate"><option value="5000">5 seconds</option><option value="15000">15 seconds</option><option value="30000">30 seconds</option><option value="60000">60 seconds</option></select></div>
@@ -602,11 +657,12 @@ function fillOrder(o){
 function cancelPending(id){account().pending=account().pending.filter(x=>x.id!==id);save();updateHeader();toast("Pending order cancelled");}
 function toast(msg){$("toast").textContent=msg;$("toast").classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(()=>$("toast").classList.remove("on"),2600);}
 function listWatch(){
- const arr=state.simWatch,el=$("watch");el.innerHTML="";const picker=$("tokenPicker");
- if(picker){picker.innerHTML=arr.map(s=>{const c=state.customCoins[s];return `<option value="${esc(s)}">${esc(s)} · ${esc(c?.name||s)}</option>`;}).join("");picker.value=symbol;picker.disabled=!arr.length;}
+ const arr=state.simWatch,el=$("watch"),picker=$("tokenPicker"); el.innerHTML="";
+ if(picker){picker.innerHTML=arr.length?arr.map(s=>{const c=state.customCoins[s];return `<option value="${esc(s)}">${esc(s)} · ${esc(c?.name||s)}</option>`;}).join(""):"<option value=\"\">No coins yet</option>";picker.value=symbol;picker.disabled=!arr.length;}
  const quick=$("quickTokens");if(quick){quick.innerHTML=arr.slice(0,8).map(s=>`<button type="button" class="miniBtn ${s===symbol?"on":""}" data-quick="${esc(s)}">${esc(s)}</button>`).join("");quick.querySelectorAll("[data-quick]").forEach(b=>b.onclick=()=>selectSymbol(b.dataset.quick));}
+ if(!arr.length){el.innerHTML=`<div class="emptyState"><div class="orb">🪙</div><strong>Your market is empty</strong><span>Create your first memecoin above. It will get its own simulated market and a shareable global HTML link.</span></div>`;$("watchTitle").textContent="Your memecoins · 0";return;}
  for(const s of arr){const q=quotes["sim:"+s],d=q?.prev?((q.price-q.prev)/q.prev*100):0,name=state.customCoins[s]?.name||s,x=document.createElement("div");x.className="wrow "+(s===symbol?"sel":"");x.setAttribute("role","button");x.tabIndex=0;x.innerHTML=`<div><div class="sym">${esc(s)}</div><div class="desc">${esc(name)}</div></div><div><div class="wprice">${q?money(q.price):"…"}</div><div class="wchg ${d>=0?"g":"r"}">${q?pct(d):"…"}</div></div>`;x.onclick=()=>selectSymbol(s);x.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();selectSymbol(s);}};el.appendChild(x);}
- $("watchTitle").textContent="Your memecoins";
+ $("watchTitle").textContent=`Your memecoins · ${arr.length}`;
 }
 function pulse(){
  const arr=universe==="live"?state.liveWatch:state.simWatch;
@@ -742,10 +798,48 @@ function startFakeEngine(){
 }
 function updateUniverseUI(){universe="sim";state.mode="sim";if($("simSpeed"))$("simSpeed").disabled=false;if($("simTick"))$("simTick").disabled=false;if($("modeBadge")){ $("modeBadge").textContent="MY MEMECOIN MARKET";$("modeBadge").className="badge sim";}if($("legendFeed"))$("legendFeed").textContent="paper simulator";}
 function switchUniverse(){toast("PaperDesk only uses your created memecoins.");updateUniverseUI();}
+
+function encodeGlobalCoin(c){
+ const json=JSON.stringify({v:1,coin:{name:c.name,symbol:c.symbol,chain:c.chain,initialPrice:c.initialPrice,supply:c.supply,createdAt:c.createdAt}});
+ return encodeURIComponent(json);
+}
+function globalCoinLink(sym){
+ const c=state.customCoins?.[sym]; if(!c)return location.href.split("#")[0];
+ return location.href.split("#")[0]+"#coin="+encodeGlobalCoin(c);
+}
+function showGlobalLink(sym){
+ const box=$("globalShareBox"),input=$("globalShareLink"); if(!box||!input)return;
+ input.value=globalCoinLink(sym); box.style.display="grid";
+}
+async function copyGlobalLink(sym){
+ const url=globalCoinLink(sym); try{await navigator.clipboard.writeText(url);toast("Global coin link copied");}catch(e){const ta=document.createElement("textarea");ta.value=url;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();document.execCommand("copy");ta.remove();toast("Global coin link copied");}}
+function importGlobalCoinFromHash(){
+ const hash=location.hash||""; if(!hash.startsWith("#coin="))return null;
+ try{
+  const raw=decodeURIComponent(hash.slice(6)); const data=JSON.parse(raw); const c=data?.coin;
+  if(!c)throw new Error("missing coin");
+  const sym=String(c.symbol||"").trim().toUpperCase(),name=String(c.name||sym).trim(),chain=String(c.chain||"Custom").trim();
+  const price=Number(c.initialPrice),supply=Math.floor(Number(c.supply));
+  if(!/^[A-Z0-9]{2,10}$/.test(sym)||name.length<2||!Number.isFinite(price)||price<=0||!Number.isFinite(supply)||supply<1)throw new Error("invalid coin");
+  state.customCoins[sym]={name:name.slice(0,32),symbol:sym,chain:chain.slice(0,20)||"Custom",initialPrice:price,supply,createdAt:Number(c.createdAt)||Date.now()};
+  if(!state.simWatch.includes(sym))state.simWatch.push(sym); save();
+  history.replaceState(null,"",location.href.split("#")[0]+"#coin="+encodeGlobalCoin(state.customCoins[sym]));
+  return sym;
+ }catch(e){toast("That global coin link is invalid");return null;}
+}
+function publishMarketLink(){
+ const coins=Object.values(state.customCoins||{}); if(!coins.length){toast("Create a memecoin first");return;}
+ const payload=encodeURIComponent(JSON.stringify({v:1,coins:coins.map(c=>({name:c.name,symbol:c.symbol,chain:c.chain,initialPrice:c.initialPrice,supply:c.supply,createdAt:c.createdAt}))}));
+ const url=location.href.split("#")[0]+"#market="+payload;
+ navigator.clipboard?.writeText(url).then(()=>toast("Global market link copied")).catch(()=>{const ta=document.createElement("textarea");ta.value=url;document.body.appendChild(ta);ta.select();document.execCommand("copy");ta.remove();toast("Global market link copied");});
+}
+function importMarketFromHash(){
+ const hash=location.hash||"";if(!hash.startsWith("#market="))return 0;try{const d=JSON.parse(decodeURIComponent(hash.slice(8))),arr=Array.isArray(d?.coins)?d.coins:[];let n=0;for(const c of arr){const sym=String(c.symbol||"").trim().toUpperCase(),price=Number(c.initialPrice),supply=Math.floor(Number(c.supply));if(!/^[A-Z0-9]{2,10}$/.test(sym)||!String(c.name||"").trim()||!Number.isFinite(price)||price<=0||!Number.isFinite(supply)||supply<1)continue;state.customCoins[sym]={name:String(c.name).trim().slice(0,32),symbol:sym,chain:String(c.chain||"Custom").trim().slice(0,20)||"Custom",initialPrice:price,supply,createdAt:Number(c.createdAt)||Date.now()};if(!state.simWatch.includes(sym))state.simWatch.push(sym);n++;}if(n){save();toast(n+" global memecoin"+(n===1?"":"s")+" imported");}return n;}catch(e){toast("That global market link is invalid");return 0;}}
+function handleGlobalHash(){const s=importGlobalCoinFromHash();if(s)return s;const n=importMarketFromHash();return n?state.simWatch[state.simWatch.length-1]:null;}
 function createCoin(){
  const name=$("coinName").value.trim(),sym=$("coinSymbol").value.trim().toUpperCase(),chain=$("coinChain").value.trim()||"Custom",price=Number($("coinPrice").value),supply=Math.floor(Number($("coinSupply").value));
  if(name.length<2){toast("Give your memecoin a name");$("coinName").focus();return;} if(!/^[A-Z0-9]{2,10}$/.test(sym)){toast("Use a 2–10 character symbol");return;} if(state.customCoins[sym]){toast("That symbol already exists");return;} if(!Number.isFinite(price)||price<=0){toast("Starting price must be greater than 0");return;} if(!Number.isFinite(supply)||supply<1){toast("Supply must be at least 1");return;}
- state.customCoins[sym]={name:name.slice(0,32),symbol:sym,chain:chain.slice(0,20),initialPrice:price,supply,createdAt:Date.now()};state.simWatch.push(sym);delete simModels[sym];quotes["sim:"+sym]=undefined;quoteCache.delete("sim:"+sym);quoteCache.delete("sim:"+sym+":bars");save();$("coinName").value=$("coinSymbol").value=$("coinChain").value=$("coinPrice").value=$("coinSupply").value="";selectSymbol(sym);toast(sym+" created");
+ state.customCoins[sym]={name:name.slice(0,32),symbol:sym,chain:chain.slice(0,20),initialPrice:price,supply,createdAt:Date.now()};state.simWatch.push(sym);showGlobalLink(sym);delete simModels[sym];quotes["sim:"+sym]=undefined;quoteCache.delete("sim:"+sym);quoteCache.delete("sim:"+sym+":bars");save();$("coinName").value=$("coinSymbol").value=$("coinChain").value=$("coinPrice").value=$("coinSupply").value="";selectSymbol(sym);toast(sym+" created");
 }
 function addToken(){toast("Create a memecoin with the creator form above.");}
 function applyRange(r){
@@ -784,7 +878,7 @@ const commands=[
  ["Create a memecoin",()=>$("coinName").focus()],
  ["Buy selected symbol",()=>{setSide("BUY");$("qty").focus()}],["Sell selected symbol",()=>{setSide("SELL");$("qty").focus()}],
  ["Toggle SMA 20",()=>toggleIndicator("sma")],["Toggle EMA 50",()=>toggleIndicator("ema")],["Toggle Bollinger Bands",()=>toggleIndicator("bb")],
- ["Fit chart",()=>chart?.timeScale().fitContent()],["Open settings",openSettings],["Export workspace",exportWorkspace]
+ ["Fit chart",()=>chart?.timeScale().fitContent()],["Open settings",openSettings],["Export workspace",exportWorkspace],["Copy global market link",publishMarketLink]
 ];
 function openCommands(){const m=$("commandModal");m.classList.add("on");$("cmdInput").value="";renderCommands("");setTimeout(()=>$("cmdInput").focus(),0);}
 function renderCommands(q){
@@ -792,7 +886,7 @@ function renderCommands(q){
  list.querySelectorAll("[data-cmd]").forEach(el=>el.onclick=()=>{a[+el.dataset.cmd][1]();$("commandModal").classList.remove("on");});
 }
 function resetAll(){if(!confirm("Delete all your created memecoins, paper positions, orders, history and notes?"))return;state={version:5,mode:"sim",live:blankAccount(),sim:blankAccount(),liveWatch:[],simWatch:[],customCoins:{},theme:THEMES[state.theme]?state.theme:"paperdesk",refreshRate:10000};universe="sim";symbol="";for(const k of Object.keys(simModels))delete simModels[k];quotes={};quoteCache.clear();simRunning=true;simBaseTime=null;simClock=9.5*3600;updateUniverseUI();applyTheme(state.theme);save();scheduleRefresh();selectSymbol("");toast("Creator workspace reset");}
-$("tokenPicker").onchange=e=>selectSymbol(e.target.value);
+$("tokenPicker").onchange=e=>selectSymbol(e.target.value);$("copyGlobalBtn").onclick=()=>copyGlobalLink(symbol);$("publishMarketBtn").onclick=publishMarketLink;
 $("createCoinBtn").onclick=createCoin;$("coinSymbol").onkeydown=e=>{if(e.key==="Enter")createCoin()};
 $("search").onkeydown=e=>{if(e.key==="Enter"){selectSymbol(e.target.value);e.target.blur();}};
 $("orderSymbol").onchange=e=>selectSymbol(e.target.value);
@@ -838,6 +932,7 @@ applyTheme(state.theme||"paperdesk");
 updateUniverseUI();
 $("orderType").dispatchEvent(new Event("change"));
 initChart();listWatch();updateHeader();setupNotes();scheduleRefresh();
+const sharedSymbol=handleGlobalHash(); if(sharedSymbol){symbol=sharedSymbol; listWatch(); showGlobalLink(sharedSymbol);}
 renderSimulation();
 selectSymbol(symbol);
 setInterval(()=>{$("clock").textContent=new Date().toLocaleString();},1000);
