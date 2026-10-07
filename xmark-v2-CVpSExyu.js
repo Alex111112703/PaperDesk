@@ -1,0 +1,1 @@
+import{r as e}from"./chunk-KS7C4IRE-v2-BMDYr9th.js";const o=r=>e.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 12 12",fill:"none",...r},e.createElement("path",{d:"M3 3l6 6M9 3l-6 6",stroke:"currentColor",strokeWidth:1,strokeLinecap:"round"}));export{o as S};

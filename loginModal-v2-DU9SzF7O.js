@@ -1,0 +1,1 @@
+import{c as n}from"./middleware-v2-B7SyzLVk.js";const p=n(e=>({isOpen:!1,openedAt:null,openModal:()=>{typeof window<"u"&&window.dispatchEvent(new Event("sw:arm")),e({isOpen:!0,openedAt:performance.now()})},closeModal:()=>e({isOpen:!1,openedAt:null})}));export{p as u};

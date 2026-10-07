@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07080d">
+<title>FomoDesk — Paper Trading</title>
+<meta name="description" content="FomoDesk is a simulated crypto paper-trading desk. Trade with virtual funds only.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<style>
+@font-face{font-family:Aeonik;src:url("fonts/Aeonik-Regular.woff2")}@font-face{font-family:Aeonik;src:url("fonts/Aeonik-Bold.woff2");font-weight:700}
+:root{--bg:#07080d;--panel:#0e1119;--panel2:#141824;--line:#242a38;--text:#f4f6fb;--muted:#8d96a8;--green:#38d996;--red:#ff6574;--accent:#8c7cff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 70% -10%,#201a49 0,#0b0b12 35%,var(--bg) 65%);color:var(--text);font-family:Aeonik,system-ui,sans-serif;min-height:100vh}
+button,input,select{font:inherit}button{cursor:pointer}.shell{max-width:1500px;margin:auto;padding:22px}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}.brand{display:flex;align-items:center;gap:12px}.mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#9b8cff,#5b48dc);display:grid;place-items:center;font-weight:700;font-size:21px}.brand h1{font-size:20px;margin:0}.brand small{display:block;color:var(--muted);margin-top:2px}.mode{border:1px solid #3b356d;background:#17132e;color:#cfc9ff;border-radius:999px;padding:9px 14px;font-size:13px;font-weight:700}
+.grid{display:grid;grid-template-columns:260px minmax(0,1fr) 320px;gap:16px}.panel{background:rgba(14,17,25,.9);border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 50px #0005;overflow:hidden}.panel-head{padding:16px 18px;border-bottom:1px solid var(--line);font-weight:700}.watchlist{padding:8px}.coin{width:100%;background:transparent;color:var(--text);border:0;border-radius:12px;padding:13px 10px;display:flex;justify-content:space-between;text-align:left}.coin:hover,.coin.active{background:var(--panel2)}.coin .name{font-weight:700}.coin .sym{color:var(--muted);font-size:12px}.coin .price{text-align:right}.up{color:var(--green)}.down{color:var(--red)}
+.main{display:flex;flex-direction:column;gap:16px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{padding:15px 17px;background:rgba(14,17,25,.9);border:1px solid var(--line);border-radius:15px}.label{color:var(--muted);font-size:12px}.value{font-size:21px;font-weight:700;margin-top:5px}.chart{height:310px;position:relative;padding:18px}.chart canvas{width:100%;height:100%;display:block}.chart-title{position:absolute;top:16px;left:18px;z-index:2}.chart-title b{font-size:25px}.chart-title span{color:var(--muted);font-size:13px;margin-left:8px}
+.trade{padding:18px}.trade-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.trade label{font-size:12px;color:var(--muted);display:block;margin-bottom:7px}.trade input{width:100%;background:#090b11;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:12px;outline:none}.trade input:focus{border-color:#6c5cf1}.buttons{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.btn{border:0;border-radius:11px;padding:12px;font-weight:700}.buy{background:#1a9d6e;color:white}.sell{background:#bd4655;color:white}.hint{color:var(--muted);font-size:12px;margin-top:10px}
+.right .balance{padding:18px}.balance .big{font-size:29px;font-weight:700;margin:5px 0}.position{padding:13px 18px;border-top:1px solid var(--line);display:flex;justify-content:space-between}.empty{padding:24px 18px;color:var(--muted);font-size:13px}.history{max-height:330px;overflow:auto}.trade-item{padding:12px 18px;border-top:1px solid var(--line);font-size:13px;display:flex;justify-content:space-between;gap:12px}.toolbar{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--line)}.reset{background:transparent;color:#aeb5c4;border:1px solid var(--line);padding:8px 11px;border-radius:9px;font-size:12px}.footer{text-align:center;color:#6f7788;font-size:12px;padding:18px}.notice{padding:10px 14px;border:1px solid #3b356d;background:#110f20;border-radius:12px;color:#bdb7f4;font-size:12px;margin-bottom:16px}
+@media(max-width:1050px){.grid{grid-template-columns:210px minmax(0,1fr)}.right{grid-column:1/-1}.history{max-height:none}}@media(max-width:720px){.shell{padding:12px}.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.chart{height:250px}.trade-row{grid-template-columns:1fr}.right{grid-column:auto}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header><div class="brand"><div class="mark">F</div><div><h1>FomoDesk</h1><small>Crypto paper-trading terminal</small></div></div><div class="mode">● PAPER MODE — NO REAL ORDERS</div></header>
+<div class="notice">Everything on this desk is simulated. Orders use virtual USD and local browser storage only. No wallet, exchange account, or real funds are connected.</div>
+<div class="grid">
+<aside class="panel"><div class="panel-head">Markets</div><div id="watchlist" class="watchlist"></div></aside>
+<section class="main">
+<div class="stats"><div class="stat"><div class="label">Portfolio value</div><div class="value" id="portfolio">$100,000.00</div></div><div class="stat"><div class="label">Cash</div><div class="value" id="cash">$100,000.00</div></div><div class="stat"><div class="label">Total P&amp;L</div><div class="value" id="pnl">$0.00</div></div></div>
+<div class="panel chart"><div class="chart-title"><b id="assetName">Bitcoin</b><span id="assetSymbol">BTC</span></div><canvas id="chart"></canvas></div>
+<div class="panel trade"><div class="panel-head">Place paper order</div><div class="trade-row"><div><label>Price (USD)</label><input id="price" type="number" step="any"></div><div><label>Quantity</label><input id="qty" type="number" min="0" step="any" placeholder="0.00"></div></div><div class="buttons"><button class="btn buy" id="buy">Buy</button><button class="btn sell" id="sell">Sell</button></div><div class="hint" id="orderHint"></div></div>
+</section>
+<aside class="panel right"><div class="toolbar"><span>Portfolio</span><button class="reset" id="reset">Reset paper account</button></div><div class="balance"><div class="label">Available USD</div><div class="big" id="cash2">$100,000.00</div><div class="label">Starting balance: $100,000</div></div><div class="panel-head">Positions</div><div id="positions"></div><div class="panel-head">Trade history</div><div id="history" class="history"></div></aside>
+</div>
+<div class="footer">FomoDesk • Paper trading only • Prices are simulated for practice</div>
+</div>
+<script src="paper-trading.js"></script>
+</body>
+</html>

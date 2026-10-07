@@ -1,0 +1,1 @@
+import{n as o}from"./urls-v2-BlLMxa_N.js";import{c as a}from"./middleware-v2-B7SyzLVk.js";const r=a(e=>({isOpen:!1,url:null,openModal:n=>e({isOpen:!0,url:n}),closeModal:()=>e({isOpen:!1})}));function i(e){o(e)?r.getState().openModal(e):window.open(e,"_blank","noopener,noreferrer")}export{i as o,r as u};

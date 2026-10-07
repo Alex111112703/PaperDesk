@@ -1,0 +1,1 @@
+const t="https://apps.apple.com/us/app/fomo-never-miss-out/id6741115427",a="https://play.google.com/store/apps/details?id=family.fomo.app",e="https://jobs.ashbyhq.com/fomo-labs",p="https://fomo.family/download",s="https://fomo.onelink.me/a0S0";function n(o){return`${s}?deep_link_sub1=${encodeURIComponent(o)}`}export{p as F,t as a,e as b,a as c,n as g};
